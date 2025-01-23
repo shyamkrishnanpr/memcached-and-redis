@@ -1,15 +1,16 @@
 {
-  "name": "my-app",
+  "name": "memcache-hono",
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/index.ts"
   },
   "dependencies": {
     "@hono/node-server": "^1.13.7",
+    "@types/memcached": "^2.2.10",
     "dotenv": "^16.4.7",
     "hono": "^4.6.17",
-    "mongoose": "^8.9.5",
-    "redis": "^4.7.0"
+    "memcached": "^2.2.2",
+    "mongoose": "^8.9.5"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",

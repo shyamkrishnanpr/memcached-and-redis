@@ -1,5 +1,7 @@
 import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
+import dotenv from 'dotenv'
+dotenv.config()
 
 import connectDB from './db.js'
 import User from './models/User.js'

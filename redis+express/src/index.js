@@ -1,4 +1,5 @@
 const express = require('express');
+const dotenv = require('dotenv');
 const connectDB = require('./db');
 const client = require('./redisClient');
 
@@ -7,6 +8,7 @@ const User = require('./models/User');
 const app = express();
 const port = 3006;
 
+dotenv.config();
 
 connectDB();
 

@@ -1,8 +1,12 @@
 import express from 'express';
 import Memcached from 'memcached';
+import dotenv from 'dotenv';
 
 import connectDB from './db.js';
 import User from './models/user.js';
+
+
+dotenv.config();
 
 const memcached = new Memcached('localhost:11211');
 
@@ -26,7 +30,7 @@ app.use(express.json());
 
 // Sample route
 app.get('/test', (req, res) => {
-  const testKey = 'testKey';
+  const testKey = 'test';
 
   memcached.get(testKey, (err, data) => {
     if (err) {
